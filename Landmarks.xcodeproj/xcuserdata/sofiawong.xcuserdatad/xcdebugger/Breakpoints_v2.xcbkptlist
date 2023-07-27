@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "50ADBEEA-CD4C-4404-AD34-7EBF74DCB3B3"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49CE1560-F9C6-4F20-9381-C695B854F7A6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmarks/LandmarksApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "066F9566-4424-4FB8-9480-E62C71504572"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmarks/Views/Profiles/ProfileHost.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "066F9566-4424-4FB8-9480-E62C71504572 - e3439ce7108191ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Landmarks.ProfileHost.body.getter : some"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Profiles/ProfileHost.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "280">
+               </Location>
+               <Location
+                  uuid = "066F9566-4424-4FB8-9480-E62C71504572 - a02a5bccfe005fed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Button&lt;SwiftUI.Text&gt;, Swift.Optional&lt;SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, SwiftUI.Spacer, SwiftUI.EditButton)&gt;&gt;, SwiftUI._ConditionalContent&lt;Landmarks.ProfileSummary, &lt;&lt;opaque return type of SwiftUI.View.onDisappear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Landmarks.ProfileHost.body.getter : some"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Profiles/ProfileHost.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1192">
+               </Location>
+               <Location
+                  uuid = "066F9566-4424-4FB8-9480-E62C71504572 - a02a5bccfe005fed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Button&lt;SwiftUI.Text&gt;, Swift.Optional&lt;SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, SwiftUI.Spacer, SwiftUI.EditButton)&gt;&gt;, SwiftUI._ConditionalContent&lt;Landmarks.ProfileSummary, &lt;&lt;opaque return type of SwiftUI.View.onDisappear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;)&gt; in Landmarks.ProfileHost.body.getter : some"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Profiles/ProfileHost.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "1090">
+               </Location>
+               <Location
+                  uuid = "066F9566-4424-4FB8-9480-E62C71504572 - e3439ce7108191ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Landmarks.ProfileHost.body.getter : some"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Profiles/ProfileHost.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
+                  offsetFromSymbolStart = "332">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "31961680-D3F3-4ADE-9A58-63844CCDA2B5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmarks/Views/Profiles/ProfileHost.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2DC7346A-A205-47A7-B0F6-B9636B804A19"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmarks/Views/Profiles/ProfileHost.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "93CDBF71-19A1-4E8F-B0AC-F9D33CE7AE36"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmarks/Views/Profiles/ProfileHost.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9059B621-A940-4F99-9F48-E041463CB9E4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmarks/Views/Activities/ActivityRow.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1"
+            endingLineNumber = "1"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15272B6D-25F9-40FE-87F3-D845244A6DDB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmarks/Views/Activities/ActivityCreator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "createNewActivity(activity_id:name:location:description:is_private:is_recurring:category:participants:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "15272B6D-25F9-40FE-87F3-D845244A6DDB - 7c55457d115eea07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Landmarks.ActivityCreator.createNewActivity(activity_id: Swift.String, name: Swift.String, location: Swift.String, description: Swift.String, is_private: Swift.Bool, is_recurring: Swift.Bool, category: Swift.String, participants: Swift.Int) async throws -&gt; ()"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "899">
+               </Location>
+               <Location
+                  uuid = "15272B6D-25F9-40FE-87F3-D845244A6DDB - e6c2db94a8e55b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Landmarks.ActivityCreator.createNewActivity(activity_id: Swift.String, name: Swift.String, location: Swift.String, description: Swift.String, is_private: Swift.Bool, is_recurring: Swift.Bool, category: Swift.String, participants: Swift.Int) async throws -&gt; ()"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "441">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C3CBF517-8F86-4002-8599-AACA1C04B5D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Landmarks/Views/Activities/ActivityCreator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "C3CBF517-8F86-4002-8599-AACA1C04B5D5 - 38ed941159342bbe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in Landmarks.ActivityCreator.body.getter : some"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "294">
+               </Location>
+               <Location
+                  uuid = "C3CBF517-8F86-4002-8599-AACA1C04B5D5 - 5eb704d944428e93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in Landmarks.ActivityCreator.body.getter : some"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "61">
+               </Location>
+               <Location
+                  uuid = "C3CBF517-8F86-4002-8599-AACA1C04B5D5 - f23e2fe5ff4ae7bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in Landmarks.ActivityCreator.body.getter : some"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  uuid = "C3CBF517-8F86-4002-8599-AACA1C04B5D5 - 4f57f37fac7e05b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for function signature specialization &lt;Arg[2] = Value Promoted from Box&gt; of closure #1 @Sendable () async -&gt; () in closure #2 () -&gt; () in Landmarks.ActivityCreator.body.getter : some"
+                  moduleName = "Landmarks"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityCreator.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "83">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
