@@ -31,4 +31,5 @@ struct Act: Hashable, Identifiable {
     var id: String {
             activity_id
         }
+    var participants_list: [String]
 }

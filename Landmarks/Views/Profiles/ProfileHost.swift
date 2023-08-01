@@ -50,7 +50,7 @@ struct ProfileHost: View {
                                 }
                         .onDisappear {
                             fetchedProfile = draftProfile
-                            print(fetchedProfile!.userID)//poblem updating database
+                            //print(fetchedProfile!.userID)//poblem updating database
                             let userId = Auth.auth().currentUser?.uid
                             let userRef = db.collection("users").whereField("user_id", isEqualTo: userId!)
                             
@@ -89,7 +89,7 @@ struct ProfileHost: View {
                     fetchedProfile = userProfile
                     draftProfile=fetchedProfile!
                     
-                    print(fetchedProfile?.email)//this print statement returns the correct email but surrounded by Optional()
+                    //print(fetchedProfile?.email)//this print statement returns the correct email but surrounded by Optional()
                 
                 }
                     

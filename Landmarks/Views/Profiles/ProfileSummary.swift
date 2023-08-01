@@ -14,14 +14,17 @@ struct ProfileSummary: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 10) {
+                VStack(alignment: .center, spacing: 10) {
+                    Image("undraw_profile_pic_re_iwgo")
+                        .resizable()
+                        .scaledToFit()
                 Text(profile.username)
                     .bold()
                     .font(.title)
+//
 
-                Text("Bio:") + Text(profile.bio)
+                Text(profile.bio)
                 Text("Notifications: \(profile.prefersNotifications ? "On": "Off" )")
-                Text("Goal Date: ") + Text(profile.goalDate, style: .date)
                 Divider()
 
 

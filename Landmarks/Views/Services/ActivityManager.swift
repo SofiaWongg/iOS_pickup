@@ -70,7 +70,8 @@ final class ActivityManager {
                 let is_recurring = activityData["is_recurring"] as? Bool ?? false
                 let category = activityData["category"] as? String ?? ""
                 let participants = activityData["participants"] as? Int ?? 0
-                let currentActivity = Act(activity_id: id, name: name, location: location, description: description, category: category, participants: participants, is_private: is_private, is_recurring: is_recurring)
+                let participants_list = activityData["participants_list"] as? [String] ?? []
+                let currentActivity = Act(activity_id: id, name: name, location: location, description: description, category: category, participants: participants, is_private: is_private, is_recurring: is_recurring, participants_list: participants_list)
                 completion(currentActivity)//use a completion handler or just return
                 //wont need completion anymore 
                 
@@ -94,7 +95,8 @@ final class ActivityManager {
                                               category: document.data()["category"] as? String ?? "",
                                               participants: document.data()["participants"] as? Int ?? 0,
                                               is_private: document.data()["is_private"] as? Bool ?? false,
-                                              is_recurring: document.data()["is_recurring"] as? Bool ?? false)
+                                              is_recurring: document.data()["is_recurring"] as? Bool ?? false,
+                                              participants_list: document.data()["participant_list"] as? [String] ?? [])
                     actList.append(currentActivity)
                     print("\(document.documentID) => \(document.data())")
                 }

@@ -19,6 +19,9 @@ struct ActivityCreator: View {
     @State private var is_recurring: Bool = false
     @State private var start_time = Date()
     @Binding var filteredActivity: [Act]
+    @State private var showingAlert = false
+    @Binding var statusChanged: Bool
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         VStack {
@@ -63,11 +66,11 @@ struct ActivityCreator: View {
             
         
         Button(action: {
-                var id_string: String = NSUUID().uuidString
                    Task {
                        do {
-                           try await createNewActivity(activity_id:id_string, name: name, location: location, description: description, is_private: is_private, is_recurring: is_recurring, category: category, participants: 1)
+                           try await createNewActivity()
                            // Optionally, you can add code here to handle the success case
+                           self.presentationMode.wrappedValue.dismiss()
                        } catch {
                            // Handle the error here
                            print("Error creating activity: \(error)")
@@ -76,36 +79,27 @@ struct ActivityCreator: View {
                }) {
                    Text("Submit")
     
-        
-//        Button(action: {createNewActivity(id: "idk", name: name, location: location, description: description, is_private: is_private, is_recurring: is_recurring, category: category, participants: 1)}) {
-//            Text("Submit")
         }
-//            Button {
-//                Text("Create Activity")
-//                    .foregroundColor(.white)
-//                    .padding()
-//                    .background(Color.blue)
-//                    .cornerRadius(8)
-//            }
-//            .padding()
         }
-    func createNewActivity(activity_id:String, name: String, location: String, description: String, is_private: Bool, is_recurring: Bool, category: String, participants: Int) async throws {
+    func createNewActivity() async throws {
+        var id_string: String = NSUUID().uuidString
         var activityData: [String: Any] = [
-            "id": activity_id,
-            "activity_id": activity_id,
+            "id": id_string,
+            "activity_id": id_string,
             "name": name,
             "location": location,
             "description": description,
             "is_private": is_private,
             "is_recurring": is_recurring,
             "category": category,
-            "participants": participants
+            "participants": 1,
+            "participant_list":[],
         ]
         
-        var currentAct: Act = Act(activity_id: activity_id, name: name, location: location, description: description, category: category, participants: participants, is_private: is_private, is_recurring: is_recurring)
+        var currentAct: Act = Act(activity_id: id_string, name: name, location: location, description: description, category: category, participants: 1, is_private: is_private, is_recurring: is_recurring, participants_list: [])
         
         filteredActivity.append(currentAct)
-        
+        statusChanged = true
         let activityCollection = Firestore.firestore().collection("activities")
         
         // Check if the users collection already exists
@@ -117,7 +111,7 @@ struct ActivityCreator: View {
         }
         
         // Create the new user document
-        try await activityCollection.document(activity_id).setData(activityData, merge: false)
+        try await activityCollection.document(id_string).setData(activityData, merge: false)
         }
     }
     
@@ -125,6 +119,6 @@ struct ActivityCreator: View {
     
 struct ActivityCreator_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityCreator(filteredActivity: .constant([]))
+        ActivityCreator(filteredActivity: .constant([]), statusChanged: .constant(true))
     }
 }

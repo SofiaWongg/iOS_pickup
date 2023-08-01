@@ -15,6 +15,9 @@
 		020494AA2A532B3D004818F2 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 020494A92A532B3D004818F2 /* FirebaseFirestoreSwift */; };
 		020494B02A533EC1004818F2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020494AF2A533EC1004818F2 /* UserManager.swift */; };
 		022141132A704CB100D0636A /* ActivityCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022141122A704CB100D0636A /* ActivityCreator.swift */; };
+		022141152A742E5200D0636A /* AttendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022141142A742E5200D0636A /* AttendingView.swift */; };
+		0245BA342A78106600796CEC /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BA332A78106600796CEC /* ColorExtensions.swift */; };
+		0245BA362A78136F00796CEC /* CategoryPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BA352A78136F00796CEC /* CategoryPill.swift */; };
 		025CB8E32A2E38E70035F15D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB8E22A2E38E70035F15D /* CircleImage.swift */; };
 		025CB8E52A2E3AE70035F15D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB8E42A2E3AE70035F15D /* MapView.swift */; };
 		025CB8E72A2E70970035F15D /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025CB8E62A2E70970035F15D /* landmarkData.json */; };
@@ -54,6 +57,9 @@
 		020494A62A4B5799004818F2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		020494AF2A533EC1004818F2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		022141122A704CB100D0636A /* ActivityCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCreator.swift; sourceTree = "<group>"; };
+		022141142A742E5200D0636A /* AttendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendingView.swift; sourceTree = "<group>"; };
+		0245BA332A78106600796CEC /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		0245BA352A78136F00796CEC /* CategoryPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPill.swift; sourceTree = "<group>"; };
 		025CB8E22A2E38E70035F15D /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		025CB8E42A2E3AE70035F15D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		025CB8E62A2E70970035F15D /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 				02C23EEB2A4485C700F290BF /* ActivityDetail.swift */,
 				02C23EED2A44889200F290BF /* ActivityList.swift */,
 				022141122A704CB100D0636A /* ActivityCreator.swift */,
+				022141142A742E5200D0636A /* AttendingView.swift */,
 			);
 			path = Activities;
 			sourceTree = "<group>";
@@ -188,6 +195,8 @@
 		026BD3FB2A29348300CAFD7B = {
 			isa = PBXGroup;
 			children = (
+				0245BA352A78136F00796CEC /* CategoryPill.swift */,
+				0245BA332A78106600796CEC /* ColorExtensions.swift */,
 				026BD4062A29348300CAFD7B /* Landmarks */,
 				026BD4052A29348300CAFD7B /* Products */,
 				020494A82A532B3D004818F2 /* Frameworks */,
@@ -342,12 +351,15 @@
 				026C44492A37BA490015A923 /* Profile.swift in Sources */,
 				020494B02A533EC1004818F2 /* UserManager.swift in Sources */,
 				02C23EEC2A4485C700F290BF /* ActivityDetail.swift in Sources */,
+				0245BA362A78136F00796CEC /* CategoryPill.swift in Sources */,
 				026BD40A2A29348300CAFD7B /* ContentView.swift in Sources */,
 				026C443E2A3799330015A923 /* HikeGraph.swift in Sources */,
 				026C44302A3790660015A923 /* Badge.swift in Sources */,
+				022141152A742E5200D0636A /* AttendingView.swift in Sources */,
 				025CB8E52A2E3AE70035F15D /* MapView.swift in Sources */,
 				026C443D2A3799330015A923 /* GraphCapsule.swift in Sources */,
 				026C44282A37756C0015A923 /* SwiftUIView.swift in Sources */,
+				0245BA342A78106600796CEC /* ColorExtensions.swift in Sources */,
 				025CB8E32A2E38E70035F15D /* CircleImage.swift in Sources */,
 				026C443F2A3799330015A923 /* HikeDetail.swift in Sources */,
 				026C44502A37BBF30015A923 /* ProfileSummary.swift in Sources */,

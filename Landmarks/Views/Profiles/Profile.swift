@@ -16,7 +16,8 @@ struct Profile {
     var goalDate = Date()
     var bio: String
     var favorites: [Int]
+    var attending_list: [String]
     
-    static let `default` = Profile(userID: "", username: "ssofia_w", email: "", password: "", prefersNotifications: true, bio: "", favorites: [])
+    static let `default` = Profile(userID: "", username: "", email: "", password: "", prefersNotifications: true, bio: "", favorites: [], attending_list: [] )
     
 }

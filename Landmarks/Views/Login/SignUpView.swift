@@ -13,12 +13,18 @@ struct SignUpView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var email: String = ""
-
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View {
-        VStack(alignment: .leading, spacing: 15) {
-
+        VStack(alignment: .center, spacing: 15) {
+            
             Spacer() // Use all available space above the TextField
-            Text("Welcome")
+            Text("Welcome!")
+                .font(.largeTitle)
+            Image("undraw_fans")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 250.0, height: 250.0)
             Text("Sign up Here:")
             TextField("Username",
                       text: $username,
@@ -40,15 +46,15 @@ struct SignUpView: View {
                 }
                 .padding(.horizontal)
 
-            TextField("Confirm Password",
-                      text: $password,
-                      prompt: Text("Confirm Password").foregroundColor(.blue))
-                .padding(10)
-                .overlay {
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(.blue, lineWidth: 2)
-                }
-                .padding(.horizontal)
+//            TextField("Confirm Password",
+//                      text: $password,
+//                      prompt: Text("Confirm Password").foregroundColor(.blue))
+//                .padding(10)
+//                .overlay {
+//                    RoundedRectangle(cornerRadius: 10)
+//                        .stroke(.blue, lineWidth: 2)
+//                }
+//                .padding(.horizontal)
 
             TextField("Email",
                       text: $email,
@@ -63,6 +69,7 @@ struct SignUpView: View {
             Button(action: register) {
                 Text("Submit")
             }
+            .frame(maxWidth: .infinity, alignment: .center)
 
             Spacer() // Use all available space below the TextField
         }
@@ -99,6 +106,7 @@ struct SignUpView: View {
 
                     // Additional actions after user creation
                     print("User registered successfully")
+                    self.presentationMode.wrappedValue.dismiss()
                 } catch {
                     // Handle createNewUser error
                     print("Error creating new user:", error.localizedDescription)

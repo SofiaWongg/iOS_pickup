@@ -62,12 +62,14 @@ final class UserManager {
                 let bio = userData["bio"] as? String ?? ""
                 let favorites = userData["favorites"] as? [Int] ?? []
                 let prefersNotifications = userData["prefersNotifications"] as? Bool ?? false
-                let currentUser = Profile(userID: uid, username: username, email: email, password: password, prefersNotifications: prefersNotifications, bio: bio, favorites: favorites)
+                let attending_list = userData["attending_list"] as? [String] ?? []
+                let currentUser = Profile(userID: uid, username: username, email: email, password: password, prefersNotifications: prefersNotifications, bio: bio, favorites: favorites, attending_list: attending_list)
                 completion(currentUser)//use a completion handler or just return
                 
                 
             }
         
     }
+    
 }
 
