@@ -21,15 +21,15 @@ struct ActivityDetail: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-                Image(systemName: "globe")
-                    .imageScale(.large)
-                    .foregroundColor(.accentColor)
-                
                 VStack(alignment: .leading, spacing: 8) {
+                    Image("undraw_game_day")
+                        .resizable()
+                        .scaledToFit()
                     HStack{
                         Text(activity.name)
                             .font(.title)
                             .fontWeight(.bold)
+                        Spacer()
                         Button(action: {
                             statusChanged = true
                             joined.toggle()
@@ -46,9 +46,9 @@ struct ActivityDetail: View {
                     Text("Category: \(activity.category)")
                         .foregroundColor(.gray)
                         .font(.subheadline)
-                                        Text("Participants: \(numParticipants)")
-                                            .foregroundColor(.gray)
-                                            .font(.subheadline)
+                    Text("Participants: \(numParticipants)")
+                        .foregroundColor(.gray)
+                        .font(.subheadline)
                 }
                 
                 Divider()
@@ -75,6 +75,9 @@ struct ActivityDetail: View {
                     Text("About \(activity.name)")
                         .font(.title2)
                         .fontWeight(.semibold)
+                    Text(activity.location)
+                        .foregroundColor(.gray)
+                        .font(.subheadline)
                     Text(activity.description)
                         .font(.body)
                 }

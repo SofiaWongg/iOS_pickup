@@ -20,7 +20,9 @@ struct SignUpView: View {
             
             Spacer() // Use all available space above the TextField
             Text("Welcome!")
-                .font(.largeTitle)
+                .font(.largeTitle
+                    .weight(.bold))
+                
             Image("undraw_fans")
                 .resizable()
                 .scaledToFit()
@@ -69,7 +71,12 @@ struct SignUpView: View {
             Button(action: register) {
                 Text("Submit")
             }
-            .frame(maxWidth: .infinity, alignment: .center)
+            .frame(alignment: .center)
+            .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color(.lightGray), lineWidth: 2)
+                    }
 
             Spacer() // Use all available space below the TextField
         }

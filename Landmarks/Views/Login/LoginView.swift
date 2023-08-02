@@ -16,9 +16,15 @@ struct LoginView: View {
         var body: some View {
            
             NavigationStack{
-            VStack(alignment: .leading, spacing: 15) {
+            VStack(alignment: .center, spacing: 15) {
                  
                 Text("Welcome Back!")
+                    .font(.largeTitle
+                        .weight(.bold))
+                Image("undraw_awesome")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 200.0, height: 200.0)
                 Text( "Sign in Here:")
                 TextField("Email",
                           text: $email,
