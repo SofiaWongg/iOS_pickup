@@ -72,11 +72,9 @@ final class ActivityManager {
                 let participants = activityData["participants"] as? Int ?? 0
                 let participants_list = activityData["participants_list"] as? [String] ?? []
                 let currentActivity = Act(activity_id: id, name: name, location: location, description: description, category: category, participants: participants, is_private: is_private, is_recurring: is_recurring, participants_list: participants_list)
-                completion(currentActivity)//use a completion handler or just return
-                //wont need completion anymore 
-                
+                completion(currentActivity)
+                //wont need completion anymore  
             }
-        
     }
     
     func fetchActivities(completion: @escaping ([Act]?, Error?) -> Void) {
