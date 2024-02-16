@@ -28,7 +28,7 @@ struct ProfileHost: View {
         
             VStack(alignment: .leading, spacing: 20) {
                 HStack {
-    //                Button("Sign out", action: isLoggedIn = false)
+
                     Button(action: { isLoggedIn = false }) {
                                         Text("Sign out")
                                     }
@@ -89,7 +89,7 @@ struct ProfileHost: View {
                     fetchedProfile = userProfile
                     draftProfile=fetchedProfile!
                     
-                    //print(fetchedProfile?.email)//this print statement returns the correct email but surrounded by Optional()
+    
                 
                 }
                     
