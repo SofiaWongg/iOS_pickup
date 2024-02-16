@@ -49,7 +49,6 @@ struct LoginView: View {
                 Button(action: login) {
                     Text("Submit")
                 }
-//                .navigationDestination(isPresented: $isLoggedIn, destination: ContentView())
                 
                     VStack{
                         Text("New User?")
@@ -58,12 +57,7 @@ struct LoginView: View {
                                             }
                     }
                 }
-        }
-    
-            
-//
-//
-        
+        }    
     }
         
     func login() {
