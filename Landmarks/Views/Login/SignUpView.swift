@@ -13,6 +13,7 @@ struct SignUpView: View {
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var email: String = ""
+    @State private var errorMessage: String? = nil
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -77,15 +78,23 @@ struct SignUpView: View {
                         RoundedRectangle(cornerRadius: 8)
                             .stroke(Color(.lightGray), lineWidth: 2)
                     }
+          if let errorMessage = errorMessage {
+                          Text(errorMessage)
+                              .foregroundColor(.red)
+                              .padding(.horizontal)
+                      }
+                      
 
             Spacer() // Use all available space below the TextField
         }
     }
 
     func register() {
+        errorMessage = nil
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 // Handle registration error
+                errorMessage = error.localizedDescription
                 print("Error registering user:", error.localizedDescription)
             } else {
                 let userId = authResult?.user.uid ?? ""
@@ -105,6 +114,7 @@ struct SignUpView: View {
                         "favorites": favorites
                     ]) { err in
                         if let err = err {
+                            errorMessage = err.localizedDescription
                             print("Error adding document: \(err)")
                         } else {
                             print("Document added with ID: \(ref!.documentID)")

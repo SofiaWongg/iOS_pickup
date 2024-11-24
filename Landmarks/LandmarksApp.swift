@@ -12,6 +12,8 @@ import Firebase
 struct LandmarksApp: App {
     init() {
        FirebaseApp.configure()
+       let user = Auth.auth().currentUser
+       isLoggedIn = (user != nil)
     }
     @StateObject private var modelData = ModelData()
     @AppStorage("isLoggedIn") private var isLoggedIn = false
