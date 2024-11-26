@@ -69,6 +69,7 @@ struct ActivityList: View {
             let _ = updateInfo()
         }
         .onAppear {
+
             ActivityManager.shared.fetchActivities { (activities, error) in
                 if let error = error {
                     print("Error fetching activities: \(error)")
@@ -87,7 +88,6 @@ struct ActivityList: View {
                 userAttending = user.attending_list
             }
         }
-        
     }
     
     func updateInfo( ) {
