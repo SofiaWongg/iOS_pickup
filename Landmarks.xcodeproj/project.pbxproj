@@ -178,6 +178,7 @@
 		025CB8EC2A2E7B930035F15D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0265DA112CF66F2C00385DCD /* Map */,
 				020494AC2A533DAF004818F2 /* Services */,
 				020494982A4B2578004818F2 /* Login */,
 				026C44382A3799320015A923 /* Hikes */,
@@ -232,6 +233,13 @@
 				022141142A742E5200D0636A /* AttendingView.swift */,
 			);
 			path = Activities;
+			sourceTree = "<group>";
+		};
+		0265DA112CF66F2C00385DCD /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		026BD3FB2A29348300CAFD7B = {
@@ -500,7 +508,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -554,7 +562,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -574,6 +582,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need to know location to give recommendations of nearby activities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -602,6 +611,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need to know location to give recommendations of nearby activities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

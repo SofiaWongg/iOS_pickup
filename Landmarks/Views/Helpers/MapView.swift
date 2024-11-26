@@ -9,25 +9,32 @@ import SwiftUI
 import MapKit
 
 struct MapView: View {
-    var coordinate: CLLocationCoordinate2D
-    @State private var region = MKCoordinateRegion()
+    let manager = CLLocationManager()
+  @State private var cameraPosition: MapCameraPosition = .userLocation(fallback: .automatic)
+  @State private var fetchedActivities: [Act] = []
+  
     var body: some View {
-        Map(coordinateRegion: $region)
-            .onAppear {
-                setRegion(coordinate)
-            }
+      Map(position: $cameraPosition){
+        UserAnnotation()
+      }
+      .mapControls{MapUserLocationButton()}
+        .onAppear {
+            manager.requestWhenInUseAuthorization()
+          ActivityManager.shared.fetchActivities { (activities, error) in
+              if let error = error {
+                  print("Error fetching activities: \(error)")
+              } else if let activities = activities {
+                  fetchedActivities = activities // Store the fetched activities in the @State variable
+              }
+          }
+        }
     }
     
-    
-    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
-        region = MKCoordinateRegion(
-            center: coordinate,
-            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
-    }
+
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView(coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
+        MapView()
     }
 }

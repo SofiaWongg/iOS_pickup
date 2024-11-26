@@ -69,7 +69,9 @@ struct ActivityCreator: View {
                    Task {
                        do {
                            try await createNewActivity()
-                           // Optionally, you can add code here to handle the success case
+                      
+                         
+                      
                            self.presentationMode.wrappedValue.dismiss()
                        } catch {
                            // Handle the error here
