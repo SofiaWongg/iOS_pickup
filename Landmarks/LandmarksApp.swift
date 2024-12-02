@@ -26,14 +26,13 @@ struct LandmarksApp: App {
     //try not to use observable object
     var body: some Scene {
         WindowGroup {
-//            if isLoggedIn{
-//                ContentView(isLoggedIn: $isLoggedIn)
-//                    .environmentObject(modelData)
-//            }
-//            else{
-//                LoginView(isLoggedIn: $isLoggedIn)
-//            }
-          MapView();
+            if isLoggedIn{
+                ContentView(isLoggedIn: $isLoggedIn)
+                    .environmentObject(modelData)
+            }
+            else{
+                LoginView(isLoggedIn: $isLoggedIn)
+            }
         }
     }
 }

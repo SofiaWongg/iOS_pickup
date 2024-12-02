@@ -8,11 +8,13 @@
 import SwiftUI
 import Firebase
 import FirebaseFirestore
+import CoreLocation
+import MapKit
 
 struct ActivityCreator: View {
     @State private var name: String = ""
     @State private var description: String = ""
-    @State private var location: String = ""
+    @State private var location: String = "" //human readable - to remove
     //category needs to be an option not a free input
     @State private var category: String = ""
     @State private var is_private: Bool = false
@@ -22,6 +24,18 @@ struct ActivityCreator: View {
     @State private var showingAlert = false
     @Binding var statusChanged: Bool
     @Environment(\.presentationMode) var presentationMode
+    @State var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0) // Default coordinates
+  @State var showLocationPicker: Bool = false
+  @State var searchText: String = ""
+  @State private var searchQuery: String = ""
+     @State private var searchResults: [(String, CLLocationCoordinate2D)] = []
+     private var searchCompleter: MKLocalSearchCompleter = MKLocalSearchCompleter()
+     
+  
+  public init(filteredActivity: Binding<[Act]>, statusChanged: Binding<Bool>) {
+      self._filteredActivity = filteredActivity
+      self._statusChanged = statusChanged
+  }
     
     var body: some View {
         VStack {
@@ -42,11 +56,6 @@ struct ActivityCreator: View {
                     TextField("Enter description", text: $description)
                 }
                 HStack {
-                    Text("Location").bold()
-                    Divider()
-                    TextField("Enter location", text: $location)
-                }
-                HStack {
                     Text("category").bold()
                     Divider()
                     TextField("Enter category", text: $category)
@@ -57,6 +66,13 @@ struct ActivityCreator: View {
                 Toggle(isOn: $is_recurring) {
                     Text("Make Recurring").bold()
                 }
+              VStack {
+                Button("Choose Meeting Point") {
+                  showLocationPicker = true
+                }
+                Text(location.isEmpty ? "No location selected" : location)
+                
+              }
             }
             DatePicker(selection: $start_time) {
                             Text("Start time").bold()
@@ -82,7 +98,17 @@ struct ActivityCreator: View {
                    Text("Submit")
     
         }
+               .sheet(isPresented: $showLocationPicker) {
+                   LocationPicker(
+                       searchText: $searchText,
+                       searchResults: $searchResults,
+                       location: $location,
+                       coordinates: $coordinates,
+                       showLocationPicker: $showLocationPicker
+                   )
+               }
         }
+  
     func createNewActivity() async throws {
         var id_string: String = NSUUID().uuidString
         var activityData: [String: Any] = [
@@ -96,6 +122,8 @@ struct ActivityCreator: View {
             "category": category,
             "participants": 1,
             "participant_list":[],
+            "latitude": coordinates.latitude,
+            "longitude": coordinates.longitude
         ]
         
         var currentAct: Act = Act(activity_id: id_string, name: name, location: location, description: description, category: category, participants: 1, is_private: is_private, is_recurring: is_recurring, participants_list: [])
@@ -116,6 +144,7 @@ struct ActivityCreator: View {
         try await activityCollection.document(id_string).setData(activityData, merge: false)
         }
     }
+
     
 
     

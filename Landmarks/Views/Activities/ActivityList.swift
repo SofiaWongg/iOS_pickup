@@ -21,6 +21,7 @@ struct ActivityList: View {
     @State private var userAttending: [String] = []
     @State private var matchedActivities: [Act] = []
     @State var statusChanged: Bool = false
+
     
     var body: some View {
         NavigationView {

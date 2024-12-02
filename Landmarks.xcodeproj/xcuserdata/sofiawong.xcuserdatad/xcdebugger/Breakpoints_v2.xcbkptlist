@@ -172,8 +172,8 @@
             filePath = "Landmarks/Views/Activities/ActivityCreator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
             landmarkName = "createNewActivity()"
             landmarkType = "7">
             <Locations>
@@ -220,8 +220,8 @@
             filePath = "Landmarks/Views/Activities/ActivityCreator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
