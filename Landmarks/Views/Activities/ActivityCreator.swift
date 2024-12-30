@@ -14,21 +14,20 @@ import MapKit
 struct ActivityCreator: View {
     @State private var name: String = ""
     @State private var description: String = ""
-    @State private var location: String = "" //human readable - to remove
-    //category needs to be an option not a free input
     @State private var category: String = ""
     @State private var is_private: Bool = false
     @State private var is_recurring: Bool = false
     @State private var start_time = Date()
+  @State private var location_description: String = ""
     @Binding var filteredActivity: [Act]
     @State private var showingAlert = false
     @Binding var statusChanged: Bool
     @Environment(\.presentationMode) var presentationMode
-    @State var coordinates: CLLocationCoordinate2D = CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0) // Default coordinates
-  @State var showLocationPicker: Bool = false
-  @State var searchText: String = ""
-  @State private var searchQuery: String = ""
-     @State private var searchResults: [(String, CLLocationCoordinate2D)] = []
+    @State private var selectedLocation: SelectedLocation?
+    @State var showLocationPicker: Bool = false
+    @State var searchText: String = ""
+    @State private var searchQuery: String = ""
+     @State private var searchResults: [(String, String, CLLocationCoordinate2D)] = []
      private var searchCompleter: MKLocalSearchCompleter = MKLocalSearchCompleter()
      
   
@@ -67,10 +66,14 @@ struct ActivityCreator: View {
                     Text("Make Recurring").bold()
                 }
               VStack {
-                Button("Choose Meeting Point") {
+                Button(selectedLocation?.address != nil ? "Change Meeting Point" : "Choose Meeting Point") {
                   showLocationPicker = true
                 }
-                Text(location.isEmpty ? "No location selected" : location)
+                Text(selectedLocation?.address ?? "No location selected")
+                
+                Text("Location Description").bold()
+                Divider()
+                TextField("(Optional)", text: $location_description)
                 
               }
             }
@@ -99,34 +102,46 @@ struct ActivityCreator: View {
     
         }
                .sheet(isPresented: $showLocationPicker) {
-                   LocationPicker(
-                       searchText: $searchText,
-                       searchResults: $searchResults,
-                       location: $location,
-                       coordinates: $coordinates,
-                       showLocationPicker: $showLocationPicker
-                   )
+                 LocationPicker(selectedLocation: $selectedLocation, showLocationPicker: $showLocationPicker)
                }
         }
   
     func createNewActivity() async throws {
-        var id_string: String = NSUUID().uuidString
-        var activityData: [String: Any] = [
+      let id_string: String = NSUUID().uuidString
+      let activityData: [String: Any] = [
             "id": id_string,
             "activity_id": id_string,
             "name": name,
-            "location": location,
+            "location_description": location_description,
             "description": description,
             "is_private": is_private,
             "is_recurring": is_recurring,
             "category": category,
             "participants": 1,
             "participant_list":[],
-            "latitude": coordinates.latitude,
-            "longitude": coordinates.longitude
+            "address" : selectedLocation?.address ?? "No location provided",
+            "latitude": selectedLocation?.coordinate.latitude ?? 0.0,
+            "longitude": selectedLocation?.coordinate.longitude ?? 0.0,
         ]
+      
+      let coordinates = Act.Coordinates(
+          latitude: selectedLocation?.coordinate.latitude ?? 0.0,
+          longitude: selectedLocation?.coordinate.longitude ?? 0.0
+      )
         
-        var currentAct: Act = Act(activity_id: id_string, name: name, location: location, description: description, category: category, participants: 1, is_private: is_private, is_recurring: is_recurring, participants_list: [])
+      let currentAct: Act = Act(
+          activity_id: id_string,
+          name: name,
+          location_description: location_description,
+          description: description,
+          category: category,
+          participants: 1,
+          is_private: is_private,
+          is_recurring: is_recurring,
+          participants_list: [],
+          address: selectedLocation?.address ?? "No location provided",
+          coordinates: coordinates
+      )
         
         filteredActivity.append(currentAct)
         statusChanged = true

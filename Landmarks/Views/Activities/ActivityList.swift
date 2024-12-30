@@ -115,7 +115,21 @@ struct ActivityList: View {
 
 struct ActivityList_Previews: PreviewProvider {
     static var previews: some View {
-        var _: Act = Act(activity_id: "123", name: "soccer game", location: "123 ave", description: "blah blah blah", category: "soccer", participants: 3, is_private: true, is_recurring: false, participants_list: [])
+        let coordinates = Act.Coordinates(latitude: 0.0, longitude: 0.0)
+        let previewAct = Act(
+            activity_id: "123",
+            name: "soccer game",
+            location_description: nil,
+            description: "blah blah blah",
+            category: "soccer",
+            participants: 3,
+            is_private: true,
+            is_recurring: false,
+            participants_list: [],
+            address: "123 ave",
+            coordinates: coordinates
+        )
+        
         ActivityList(isLoggedIn: .constant(false))
             .environmentObject(ModelData())
     }

@@ -1,67 +1,152 @@
-//
-//  LocationPicker.swift
-//  Landmarks
-//
-//  Created by Sofia Wong on 12/2/24.
-//
-
 import SwiftUI
 import CoreLocation
 import MapKit
+import Combine
+
+struct LocationResult: Identifiable, Hashable {
+  let id = UUID()
+  let name: String
+  let address: String
+  let coordinate: CLLocationCoordinate2D
+  
+  func hash(into hasher: inout Hasher) {
+    hasher.combine(id)
+  }
+  
+  static func == (lhs: LocationResult, rhs: LocationResult) -> Bool {
+    lhs.id == rhs.id
+  }
+}
+
+@MainActor
+class MapSearch: ObservableObject {
+  
+  private let locationManager = CLLocationManager()
+  
+  
+  @Published var searchText: String = ""
+  @Published var searchResults: [LocationResult] = []
+  private var searchTask: Task<Void, Never>?
+  
+  //getting users location on startup
+  init() {
+      locationManager.desiredAccuracy = kCLLocationAccuracyBest
+      locationManager.requestWhenInUseAuthorization()
+      locationManager.startUpdatingLocation()
+  }
+  
+  func search() {
+    searchTask?.cancel()
+    
+    guard !searchText.isEmpty else {
+      searchResults = []
+      return
+    }
+    
+    searchTask = Task {
+      do {
+        try await Task.sleep(nanoseconds: 200_000_000)
+        guard !Task.isCancelled else { return }
+        
+        let results = await searchForLocation(searchText: searchText)
+        guard !Task.isCancelled else { return }
+        
+        await MainActor.run {
+          self.searchResults = results
+            .prefix(6) // Limit to top 6 results
+            .map { name, address, coordinate in
+              LocationResult(name: name, address: address, coordinate: coordinate)
+            }
+        }
+      } catch {
+        print("Search error: \(error)")
+      }
+    }
+  }
+  
+  private func searchForLocation(searchText: String) async -> [(String, String, CLLocationCoordinate2D)] {
+    var searchResults: [(String, String, CLLocationCoordinate2D)] = []
+    let searchRequest = MKLocalSearch.Request()
+    searchRequest.naturalLanguageQuery = searchText
+    searchRequest.resultTypes = [.pointOfInterest, .address]
+    
+    if let userLocation = locationManager.location?.coordinate {
+      searchRequest.region = MKCoordinateRegion(
+        center: userLocation,
+        span: MKCoordinateSpan(latitudeDelta: 1.0, longitudeDelta: 1.0)
+      )
+    }
+    
+    do {
+      let search = MKLocalSearch(request: searchRequest)
+      let response = try await search.start()
+      
+      for item in response.mapItems {
+        let name = item.name ?? "No given name"
+        let address = item.placemark.title ?? "no address"
+        searchResults.append((name, address, item.placemark.coordinate))
+      }
+    } catch {
+      print("Error searching for location: \(error.localizedDescription)")
+    }
+    
+    return searchResults
+  }
+}
+
+struct SelectedLocation {
+  let address: String
+  let coordinate: CLLocationCoordinate2D
+}
 
 struct LocationPicker: View {
-  @Binding var searchText: String
-  @Binding var searchResults:  [(String, CLLocationCoordinate2D)]
-  @Binding var location: String
-  @Binding var coordinates: CLLocationCoordinate2D
+  @StateObject private var mapSearch = MapSearch()
+  @Binding var selectedLocation: SelectedLocation?
   @Binding var showLocationPicker: Bool
   
-  
-    var body: some View {
-      Text("Search for a meeting point")
-      TextField("Search for a meeting point", text: $searchText)
-        .onChange(of: searchText){
-        Task{
-          searchResults = await searchForLocation(searchText: searchText)
+  var body: some View {
+    List {
+      Section {
+        Text("Search for your events location")
+        TextField("Search", text: $mapSearch.searchText)
+          .autocorrectionDisabled()
+          .textInputAutocapitalization(.never)
+          .onChange(of: mapSearch.searchText) {
+            mapSearch.search()
+          }
+        
+        ForEach(mapSearch.searchResults) { result in
+          Button {
+            selectedLocation = SelectedLocation(
+              address: result.address,
+              coordinate: result.coordinate
+            )
+            showLocationPicker = false
+          } label: {
+            VStack(alignment: .leading, spacing: 4) {
+              Text(result.name)
+                .font(.body)
+              Text(result.address)
+                .font(.caption)
+                .foregroundColor(.gray)
+            }
+            .padding(.vertical, 4)
+          }
         }
       }
-      List(searchResults, id: \.0) { result in
-        VStack{
-          Text(result.0)
-        }.onTapGesture {
-          location = result.0
-          coordinates = result.1
-          showLocationPicker = false
-        }} //id?
-        .presentationDetents([ .large])
+      
+      Section {
+        if let location = selectedLocation {
+          TextField("Address", text: .constant(location.address))
+            .disabled(true)
+        }
+      }
     }
+  }
 }
 
-func searchForLocation(searchText: String) async -> [(String,CLLocationCoordinate2D )] {
-  var searchResults: [(String, CLLocationCoordinate2D)] = []
-  let searchRequest = MKLocalSearch.Request()
-  searchRequest.naturalLanguageQuery = searchText
-  do {
-    let search = MKLocalSearch(request: searchRequest)
-    let response = try await search.start()
-    
-    for item in response.mapItems{
-      searchResults.append((item.name ?? "No given name", item.placemark.coordinate))
-    }
-  } catch {
-    print("Error searching for location: \(error.localizedDescription)")
-  }
-  return searchResults
-}
 
 
 #Preview {
-    // Example preview with dummy bindings
-    LocationPicker(
-        searchText: .constant(""),
-        searchResults: .constant([]),
-        location: .constant(""),
-        coordinates: .constant(CLLocationCoordinate2D(latitude: 0.0, longitude: 0.0)),
-        showLocationPicker: .constant(true)
-    )
+  LocationPicker(selectedLocation: .constant(nil), showLocationPicker: .constant(true))
 }

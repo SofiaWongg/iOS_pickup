@@ -75,7 +75,7 @@ struct ActivityDetail: View {
                     Text("About \(activity.name)")
                         .font(.title2)
                         .fontWeight(.semibold)
-                    Text(activity.location)
+                    Text(activity.address)
                         .foregroundColor(.gray)
                         .font(.subheadline)
                     Text(activity.description)
@@ -354,7 +354,18 @@ struct ActivityDetail_Previews: PreviewProvider {
     
     // Make sure ModelData provides an array of Act instances
     static var previews: some View {
-        var currentActivity: Act = Act(activity_id: "123", name: "soccer game", location: "123 ave", description: "blah blah blah", category: "soccer", participants: 3, is_private: true, is_recurring: false, participants_list: ["happy"])
+      let coordinates = Act.Coordinates(latitude: 0.0, longitude: 0.0)
+        var currentActivity: Act = Act( activity_id: "123",
+                                        name: "soccer game",
+                                        location_description: nil,
+                                        description: "blah blah blah",
+                                        category: "soccer",
+                                        participants: 3,
+                                        is_private: true,
+                                        is_recurring: false,
+                                        participants_list: [],
+                                        address: "123 ave",
+                                        coordinates: coordinates)
         ActivityDetail(activity: currentActivity, statusChanged: .constant(false)) // Use modelData.acts instead of modelData.activity
             .environmentObject(modelData)
     }

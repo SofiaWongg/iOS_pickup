@@ -15,6 +15,7 @@
 		0245BA342A78106600796CEC /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BA332A78106600796CEC /* ColorExtensions.swift */; };
 		0245BA362A78136F00796CEC /* CategoryPill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BA352A78136F00796CEC /* CategoryPill.swift */; };
 		0250E4C42CFE23B00071117C /* LocationPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250E4C32CFE23B00071117C /* LocationPicker.swift */; };
+		0250E4C62CFF9A2F0071117C /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250E4C52CFF9A2F0071117C /* LocationManager.swift */; };
 		025CB8E32A2E38E70035F15D /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB8E22A2E38E70035F15D /* CircleImage.swift */; };
 		025CB8E52A2E3AE70035F15D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CB8E42A2E3AE70035F15D /* MapView.swift */; };
 		025CB8E72A2E70970035F15D /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 025CB8E62A2E70970035F15D /* landmarkData.json */; };
@@ -82,6 +83,7 @@
 		0245BA332A78106600796CEC /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		0245BA352A78136F00796CEC /* CategoryPill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPill.swift; sourceTree = "<group>"; };
 		0250E4C32CFE23B00071117C /* LocationPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPicker.swift; sourceTree = "<group>"; };
+		0250E4C52CFF9A2F0071117C /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		025CB8E22A2E38E70035F15D /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		025CB8E42A2E3AE70035F15D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		025CB8E62A2E70970035F15D /* landmarkData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = landmarkData.json; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				020494AF2A533EC1004818F2 /* UserManager.swift */,
 				026CF81E2A6726C700E75917 /* ActivityManager.swift */,
+				0250E4C52CFF9A2F0071117C /* LocationManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				026BD40A2A29348300CAFD7B /* ContentView.swift in Sources */,
 				026C443E2A3799330015A923 /* HikeGraph.swift in Sources */,
 				026C44302A3790660015A923 /* Badge.swift in Sources */,
+				0250E4C62CFF9A2F0071117C /* LocationManager.swift in Sources */,
 				022141152A742E5200D0636A /* AttendingView.swift in Sources */,
 				025CB8E52A2E3AE70035F15D /* MapView.swift in Sources */,
 				026C443D2A3799330015A923 /* GraphCapsule.swift in Sources */,
@@ -586,6 +590,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Requesting location access to find relevant events";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need to know location to give recommendations of nearby activities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -615,6 +620,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Landmarks/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Requesting location access to find relevant events";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Need to know location to give recommendations of nearby activities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
