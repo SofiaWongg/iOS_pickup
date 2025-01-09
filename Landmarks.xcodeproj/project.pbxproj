@@ -10,6 +10,7 @@
 		0204949C2A4B2D45004818F2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0204949B2A4B2D45004818F2 /* LoginView.swift */; };
 		020494A02A4B3D6C004818F2 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0204949F2A4B3D6C004818F2 /* SignUpView.swift */; };
 		020494B02A533EC1004818F2 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020494AF2A533EC1004818F2 /* UserManager.swift */; };
+		02186ED42D30417700D51513 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02186ED32D30417700D51513 /* MockData.swift */; };
 		022141132A704CB100D0636A /* ActivityCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022141122A704CB100D0636A /* ActivityCreator.swift */; };
 		022141152A742E5200D0636A /* AttendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022141142A742E5200D0636A /* AttendingView.swift */; };
 		0245BA342A78106600796CEC /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0245BA332A78106600796CEC /* ColorExtensions.swift */; };
@@ -78,6 +79,7 @@
 		0204949B2A4B2D45004818F2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0204949F2A4B3D6C004818F2 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		020494AF2A533EC1004818F2 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		02186ED32D30417700D51513 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		022141122A704CB100D0636A /* ActivityCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCreator.swift; sourceTree = "<group>"; };
 		022141142A742E5200D0636A /* AttendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendingView.swift; sourceTree = "<group>"; };
 		0245BA332A78106600796CEC /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				025CB8E22A2E38E70035F15D /* CircleImage.swift */,
 				025CB8E42A2E3AE70035F15D /* MapView.swift */,
 				025CB8F52A3266E50035F15D /* FavoriteButton.swift */,
+				02186ED32D30417700D51513 /* MockData.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 				026C44522A37BC7B0015A923 /* HikeBadge.swift in Sources */,
 				026C44262A3773840015A923 /* HexagonParameters.swift in Sources */,
 				02C23EEE2A44889200F290BF /* ActivityList.swift in Sources */,
+				02186ED42D30417700D51513 /* MockData.swift in Sources */,
 				026C442E2A377D6A0015A923 /* RotatedBadgeSynbol.swift in Sources */,
 				025CB8EB2A2E74BC0035F15D /* ModelData.swift in Sources */,
 			);

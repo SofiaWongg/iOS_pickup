@@ -172,8 +172,8 @@
             filePath = "Landmarks/Views/Activities/ActivityCreator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "createNewActivity()"
             landmarkType = "7">
             <Locations>
@@ -220,8 +220,8 @@
             filePath = "Landmarks/Views/Activities/ActivityCreator.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -291,182 +291,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F708CAF9-57E0-4939-A8B9-886A0F9A92A5"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "333"
-            endingLineNumber = "333"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1E9F074C-6F7A-4E01-BF84-F7DD7083178F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "303"
-            endingLineNumber = "303"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "09A8132A-4F29-4442-A621-BA1091B442DB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "283"
-            endingLineNumber = "283"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "55AD7E42-6184-4C2F-AF66-B60B183D7BDB"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "282"
-            endingLineNumber = "282"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "398E7BFB-B433-4A73-B58A-BBBDA7012A05"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "280"
-            endingLineNumber = "280"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "82F84653-F9EE-4758-8AA0-1EDEA6003790"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "293"
-            endingLineNumber = "293"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "692B36C1-FF44-42B7-B50E-10285E808CEC"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "332"
-            endingLineNumber = "332"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C39B4D96-754A-4A61-A6A6-64AC40E54EB0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "273"
-            endingLineNumber = "273"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3DE97D7D-3D1D-4799-A0D0-8B0A4B309BA1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "3DE97D7D-3D1D-4799-A0D0-8B0A4B309BA1 - 8ace7df7b42778dc"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Landmarks.addParticipant(activity: Landmarks.Act, num_participants: SwiftUI.Binding&lt;Swift.Int&gt;) -&gt; ()"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "102"
-                  endingLineNumber = "102"
-                  offsetFromSymbolStart = "1465">
-               </Location>
-               <Location
-                  uuid = "3DE97D7D-3D1D-4799-A0D0-8B0A4B309BA1 - 8ace7df7b4277883"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Landmarks.addParticipant(activity: Landmarks.Act, num_participants: SwiftUI.Binding&lt;Swift.Int&gt;) -&gt; ()"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "101"
-                  endingLineNumber = "101"
-                  offsetFromSymbolStart = "1465">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "78AB6A2B-46F9-4069-90CE-674087736499"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -474,8 +298,8 @@
             filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -522,184 +346,10 @@
             filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "body"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "19F018C8-B670-4E03-A767-84DFCC116470"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "19F018C8-B670-4E03-A767-84DFCC116470 - da7a4425bf4dac05"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Landmarks.ActivityDetail.body.getter : some"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "1295">
-               </Location>
-               <Location
-                  uuid = "19F018C8-B670-4E03-A767-84DFCC116470 - da7a4425bf4dac05"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Landmarks.ActivityDetail.body.getter : some"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "99"
-                  endingLineNumber = "99"
-                  offsetFromSymbolStart = "1519">
-               </Location>
-               <Location
-                  uuid = "19F018C8-B670-4E03-A767-84DFCC116470 - da7a4425bf4dac26"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Landmarks.ActivityDetail.body.getter : some"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "1519">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D02F5445-9F71-4E89-96A6-59F6321F41B3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
-            landmarkName = "ActivityDetail"
-            landmarkType = "14">
-            <Locations>
-               <Location
-                  uuid = "D02F5445-9F71-4E89-96A6-59F6321F41B3 - 5399b022a4e3077a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Landmarks.ActivityDetail.fetchParticipantNames(activity: Landmarks.Act) -&gt; ()"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "108"
-                  endingLineNumber = "108"
-                  offsetFromSymbolStart = "69">
-               </Location>
-               <Location
-                  uuid = "D02F5445-9F71-4E89-96A6-59F6321F41B3 - 5399b022a4e3075b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Landmarks.ActivityDetail.fetchParticipantNames(activity: Landmarks.Act) -&gt; ()"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "109"
-                  endingLineNumber = "109"
-                  offsetFromSymbolStart = "69">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0FA24EB0-CFED-4AD0-9F88-DA541F3A6FE0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "174"
-            endingLineNumber = "174"
-            landmarkName = "ActivityDetail"
-            landmarkType = "14">
-            <Locations>
-               <Location
-                  uuid = "0FA24EB0-CFED-4AD0-9F88-DA541F3A6FE0 - 113f249251fa5aef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Landmarks.ActivityDetail.fetchParticipantNames(activity: Landmarks.Act) -&gt; ()"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129"
-                  offsetFromSymbolStart = "1158">
-               </Location>
-               <Location
-                  uuid = "0FA24EB0-CFED-4AD0-9F88-DA541F3A6FE0 - 5399b022a4e300c7"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Landmarks.ActivityDetail.fetchParticipantNames(activity: Landmarks.Act) -&gt; ()"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "129"
-                  endingLineNumber = "129"
-                  offsetFromSymbolStart = "859">
-               </Location>
-               <Location
-                  uuid = "0FA24EB0-CFED-4AD0-9F88-DA541F3A6FE0 - 113f249251fa5a88"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Landmarks.ActivityDetail.fetchParticipantNames(activity: Landmarks.Act) -&gt; ()"
-                  moduleName = "Landmarks"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/sofiawong/Desktop/Landmarks/Landmarks/Views/Activities/ActivityDetail.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "130"
-                  endingLineNumber = "130"
-                  offsetFromSymbolStart = "220">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -712,8 +362,8 @@
             filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "addParticipant(activity:)"
             landmarkType = "7">
             <Locations>
@@ -748,38 +398,6 @@
                   offsetFromSymbolStart = "938">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A6D6BB9D-96E4-46EA-A6B0-1015B94B9235"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "ActivityDetail"
-            landmarkType = "14">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A078B3A8-4D59-4F19-B231-0DFB7C6AD147"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Landmarks/Views/Activities/ActivityDetail.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "ActivityDetail"
-            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

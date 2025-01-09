@@ -18,8 +18,7 @@ struct ActivityCreator: View {
     @State private var is_private: Bool = false
     @State private var is_recurring: Bool = false
     @State private var start_time = Date()
-  @State private var location_description: String = ""
-    @Binding var filteredActivity: [Act]
+    @State private var location_description: String = ""
     @State private var showingAlert = false
     @Binding var statusChanged: Bool
     @Environment(\.presentationMode) var presentationMode
@@ -30,9 +29,7 @@ struct ActivityCreator: View {
      @State private var searchResults: [(String, String, CLLocationCoordinate2D)] = []
      private var searchCompleter: MKLocalSearchCompleter = MKLocalSearchCompleter()
      
-  
-  public init(filteredActivity: Binding<[Act]>, statusChanged: Binding<Bool>) {
-      self._filteredActivity = filteredActivity
+  init(statusChanged: Binding<Bool>) {
       self._statusChanged = statusChanged
   }
     
@@ -70,9 +67,8 @@ struct ActivityCreator: View {
                   showLocationPicker = true
                 }
                 Text(selectedLocation?.address ?? "No location selected")
-                
-                Text("Location Description").bold()
                 Divider()
+                Text("Location Description").bold()
                 TextField("(Optional)", text: $location_description)
                 
               }
@@ -143,7 +139,6 @@ struct ActivityCreator: View {
           coordinates: coordinates
       )
         
-        filteredActivity.append(currentAct)
         statusChanged = true
         let activityCollection = Firestore.firestore().collection("activities")
         
@@ -165,6 +160,6 @@ struct ActivityCreator: View {
     
 struct ActivityCreator_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityCreator(filteredActivity: .constant([]), statusChanged: .constant(true))
+        ActivityCreator(statusChanged: .constant(true))
     }
 }
