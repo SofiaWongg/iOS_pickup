@@ -13,21 +13,17 @@ struct MapView: View {
   @State private var cameraPosition: MapCameraPosition = .userLocation(fallback: .automatic)
   @Binding var activities: [Act]
   @State var statusChanged = false//currently unused - probably make this a published var in content view
-  @State var selection: String? = nil
-  
-  var selectedActivity: Act? {
-          guard let selection = selection else { return nil }
-          return activities.first { $0.activity_id == selection }
-      }
+  @State var selectedID: String? = nil
+  @Binding var selectedActivity: Act?
   
   var body: some View {
     if let selectedActivity = selectedActivity{
-      ActivityDetail(activity: selectedActivity, statusChanged: $statusChanged, onRefreshNeeded: {})
+      ActivityDetail(selectedActivity: $selectedActivity, statusChanged: $statusChanged, onRefreshNeeded: {}, sourceView: .map, activity: selectedActivity)
     }
     else{
 
       Group{
-        Map(position: $cameraPosition, selection: $selection) {
+        Map(position: $cameraPosition, selection: $selectedID) {
           UserAnnotation() //TODO: add marker links for each activity
           ForEach(activities) { activity in
             Marker(activity.name, coordinate: activity.locationCoordinate)
@@ -35,6 +31,13 @@ struct MapView: View {
           }
         }
         .mapControls{MapUserLocationButton()}
+        .onChange(of: selectedID) {
+                            if let newID = selectedID {
+                                selectedActivity = activities.first { $0.activity_id == newID }
+                            } else {
+                                selectedActivity = nil
+                            }
+                        }
         .onAppear {
           manager.requestWhenInUseAuthorization() //requesting location if not already given
         }
@@ -48,6 +51,6 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
   static var previews: some View {
-    MapView(activities: .constant(mockActivities))
+    MapView(activities: .constant(mockActivities), selectedActivity: .constant(mockActivities[1]))
   }
 }

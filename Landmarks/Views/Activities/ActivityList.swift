@@ -22,6 +22,7 @@ struct ActivityList: View {
     @State var statusChanged: Bool = false
     var onRefreshNeeded: () -> Void // Add this for triggering refresh in ContentView
   @State private var isLoading = false
+  @Binding var selectedActivity: Act?
     
     var filteredActivity: [Act] { activities }
     
@@ -34,15 +35,16 @@ struct ActivityList: View {
                 
                 if showAttendingOnly {
                     ForEach(matchedActivities) { activity in
-                        NavigationLink(destination: ActivityDetail(activity: activity, statusChanged: $statusChanged, onRefreshNeeded: onRefreshNeeded)) {
-                            ActivityRow(activity: activity)
-                        }
+                      ActivityRow(activity: activity).onTapGesture {
+                          selectedActivity = activity
+                      }
                     }
                 } else {
                     ForEach(filteredActivity) { activity in
-                        NavigationLink(destination: ActivityDetail(activity: activity, statusChanged: $statusChanged, onRefreshNeeded: onRefreshNeeded)) {
-                            ActivityRow(activity: activity)
-                        }
+                      ActivityRow(activity: activity)
+                        .onTapGesture {
+                                                    selectedActivity = activity
+                                                }
                     }
                 }
             }
@@ -101,7 +103,7 @@ struct ActivityList_Previews: PreviewProvider {
         ActivityList(
             isLoggedIn: .constant(false),
             activities: .constant([]),
-            onRefreshNeeded: {}
+            onRefreshNeeded: {}, selectedActivity: .constant(nil)
         )
         .environmentObject(ModelData())
     }

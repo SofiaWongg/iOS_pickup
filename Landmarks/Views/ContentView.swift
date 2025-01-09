@@ -12,6 +12,8 @@ struct ContentView: View {
     @Binding var isLoggedIn: Bool
     @State private var activities: [Act] = []
     @State private var needsRefresh = false
+    @State private var selectedActivity: Act? = nil
+    @State var statusChanged: Bool = false
     
     enum Tab {
         case list
@@ -19,26 +21,35 @@ struct ContentView: View {
     }
     
     var body: some View {
-        TabView(selection: $selection) {
-            ActivityList(
-                isLoggedIn: $isLoggedIn,
-                activities: $activities,
-                onRefreshNeeded: { needsRefresh = true }
-            )
-            .tabItem { Label("List", systemImage: "list.bullet") }
-            .tag(Tab.list)
-            
-          MapView(activities: $activities)
-                .tabItem { Label("Map", systemImage: "map") }
-                .tag(Tab.map)
+      if let selectedActivity = selectedActivity{
+        ActivityDetail(selectedActivity: $selectedActivity, statusChanged: $statusChanged, onRefreshNeeded: {}, sourceView: .list, activity: selectedActivity)
+      }
+      else{
+        Group{
+          TabView(selection: $selection) {
+              ActivityList(
+                  isLoggedIn: $isLoggedIn,
+                  activities: $activities,
+                  onRefreshNeeded: { needsRefresh = true },
+                  selectedActivity: $selectedActivity
+              )
+              .tabItem { Label("List", systemImage: "list.bullet") }
+              .tag(Tab.list)
+              
+            MapView(activities: $activities, selectedActivity: $selectedActivity)
+                  .tabItem { Label("Map", systemImage: "map") }
+                  .tag(Tab.map)
+          }
+          .onAppear(perform: fetchActivities)
+          .onChange(of: needsRefresh) {
+              if needsRefresh {
+                  fetchActivities()
+                  self.needsRefresh = false
+              }
+          }
         }
-        .onAppear(perform: fetchActivities)
-        .onChange(of: needsRefresh) { 
-            if needsRefresh {
-                fetchActivities()
-                self.needsRefresh = false
-            }
-        }
+      }
+
     }
     
     private func fetchActivities() {
