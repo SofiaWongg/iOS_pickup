@@ -22,7 +22,7 @@ import CoreLocation
 struct Act: Hashable, Identifiable {
     var activity_id: String
     var name: String
-    var location: String
+    var location_description: String?
     var description: String
     var category: String
     var participants: Int
@@ -32,4 +32,17 @@ struct Act: Hashable, Identifiable {
             activity_id
         }
     var participants_list: [String]
+  var address: String
+  var coordinates: Coordinates
+  var locationCoordinate: CLLocationCoordinate2D {
+      CLLocationCoordinate2D(
+          latitude: coordinates.latitude,
+          longitude: coordinates.longitude
+      )
+  }
+  
+  struct Coordinates: Hashable, Codable {
+      var latitude: Double
+      var longitude: Double
+  }
 }

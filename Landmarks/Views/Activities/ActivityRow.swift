@@ -40,12 +40,7 @@ struct ActivityRow: View {
                         .lineLimit(2)
                         .padding(.bottom, 5)
                     
-                    
-                    HStack(alignment: .center) {
-                        Image(systemName: "mappin")
-                        Text(activity.location)
-                    }
-                    .padding(.bottom, 5)
+                  
                     
                     HStack {
                         CategoryPill(categoryName: activity.category)
@@ -59,9 +54,19 @@ struct ActivityRow: View {
 }
     
     struct ActivityRow_Previews: PreviewProvider {
-        //static var activity = ModelData().activity
         static var previews: some View {
-            let currentActivity: Act = Act(activity_id: "123", name: "soccer game", location: "123 ave", description: "blah blah blah", category: "soccer", participants: 3, is_private: true, is_recurring: false, participants_list: [])
+          let coordinates = Act.Coordinates(latitude: 0.0, longitude: 0.0)
+            let currentActivity: Act = Act( activity_id: "123",
+                                            name: "soccer game",
+                                            location_description: nil,
+                                            description: "blah blah blah",
+                                            category: "soccer",
+                                            participants: 3,
+                                            is_private: true,
+                                            is_recurring: false,
+                                            participants_list: [],
+                                            address: "123 ave",
+                                            coordinates: coordinates)
             ActivityRow(activity: currentActivity)
             //ActivityRow(activity: activity[1])
         }

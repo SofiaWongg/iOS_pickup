@@ -33,10 +33,6 @@ struct LandmarksApp: App {
             else{
                 LoginView(isLoggedIn: $isLoggedIn)
             }
-            
-//            SignUpView()
-//            ContentView()
-//
         }
     }
 }
