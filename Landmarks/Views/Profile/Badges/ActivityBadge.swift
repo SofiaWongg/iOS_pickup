@@ -1,5 +1,5 @@
 //
-//  HikeBadge.swift
+//  ActivityBadge.swift
 //  Landmarks
 //
 //  Created by Sofia Wong on 6/12/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct HikeBadge: View {
+struct ActivityBadge: View {
     var name: String
 
 
@@ -26,8 +26,8 @@ struct HikeBadge: View {
 }
 
 
-struct HikeBadge_Previews: PreviewProvider {
+struct ActivityBadge_Previews: PreviewProvider {
     static var previews: some View {
-        HikeBadge(name: "Preview Testing")
+        ActivityBadge(name: "Preview Testing")
     }
 }

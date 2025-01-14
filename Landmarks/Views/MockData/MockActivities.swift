@@ -1,5 +1,5 @@
 //
-//  MockData.swift
+//  MockActivities.swift
 //  Landmarks
 //
 //  Created by Sofia Wong on 1/9/25.

@@ -35,10 +35,10 @@ struct ProfileSummary: View {
 
                                    ScrollView(.horizontal) {
                                        HStack {
-                                           HikeBadge(name: "First Activity")
-                                           HikeBadge(name: "Sports Day")
+                                           ActivityBadge(name: "First Activity")
+                                           ActivityBadge(name: "Sports Day")
                                                .hueRotation(Angle(degrees: 90))
-                                           HikeBadge(name: "Tenth Activity")
+                                           ActivityBadge(name: "Tenth Activity")
                                                .grayscale(0.5)
                                                .hueRotation(Angle(degrees: 45))
                                        }
