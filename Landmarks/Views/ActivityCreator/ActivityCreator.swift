@@ -29,10 +29,10 @@ struct ActivityCreator: View {
      @State private var searchResults: [(String, String, CLLocationCoordinate2D)] = []
      private var searchCompleter: MKLocalSearchCompleter = MKLocalSearchCompleter()
      
-  init(statusChanged: Binding<Bool>) {
-      self._statusChanged = statusChanged
-  }
-    
+  init(statusChanged: Binding<Bool> = .constant(false)) {
+          _statusChanged = statusChanged
+      }
+  
     var body: some View {
         VStack {
             Text("Create A New Activity!")
@@ -85,9 +85,10 @@ struct ActivityCreator: View {
                        do {
                            try await createNewActivity()
                       
-                         
+                            statusChanged = true
                       
                            self.presentationMode.wrappedValue.dismiss()
+                         
                        } catch {
                            // Handle the error here
                            print("Error creating activity: \(error)")
@@ -139,7 +140,7 @@ struct ActivityCreator: View {
           coordinates: coordinates
       )
         
-        statusChanged = true
+        
         let activityCollection = Firestore.firestore().collection("activities")
         
         // Check if the users collection already exists
@@ -160,6 +161,6 @@ struct ActivityCreator: View {
     
 struct ActivityCreator_Previews: PreviewProvider {
     static var previews: some View {
-        ActivityCreator(statusChanged: .constant(true))
+      ActivityCreator()
     }
 }

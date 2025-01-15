@@ -26,6 +26,7 @@ struct ActivityDetail: View {
   var sourceView: SourceView
   @State var activity: Act
   
+  
   var body: some View {
     ScrollView {
       Button(action: {selectedActivity = nil}){
@@ -90,6 +91,7 @@ struct ActivityDetail: View {
     .onAppear{
       if let selectedActivity = selectedActivity{
         activity = selectedActivity
+        numParticipants = selectedActivity.participants
       }
       guard let userId = Auth.auth().currentUser?.uid else {
         print("User not authenticated.")
@@ -101,7 +103,6 @@ struct ActivityDetail: View {
       }
       print(activity.participants)
       print(activity.participants_list)
-      numParticipants = activity.participants
     }
     .onDisappear{
       statusChanged = false
